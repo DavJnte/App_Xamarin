@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+x:Class="XamSQLite.Views.ProductPage"
+Visual="Material"
+Title="Liste des Médicaments"
+Background="White">
+    <!--Balise qui inclue le titre la page, déclaration de classe-->
+
+    <ContentPage.Content>
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <!--List qui va faire apparaitre la liste lstProducts avec parametre de couleur , taille, etc..-->
+            <ListView x:Name="lstProduct" ItemsSource="{Binding lstProducts}"
+                        BackgroundColor="LightBlue" HasUnevenRows="True"
+                        RowHeight="100" SeparatorColor="Black" SeparatorVisibility="Default"
+                        Grid.Row="0" Grid.Column="0" Margin="2" ItemSelected="lstProduct_ItemSelected">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="8*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <!--Bouton Effacer X -->
+                                <Button BackgroundColor="#A3A3A3" TextColor="#eb3449"
+                                    HorizontalOptions="Center" VerticalOptions="FillAndExpand"
+                                    Grid.Column="1" x:Name="btnDeleteProduct"
+                                    Clicked="btnDeleteProduct_Clicked" CommandParameter="{Binding ID}" Text="X" FontSize="20"/>
+
+                                <StackLayout HorizontalOptions="FillAndExpand" Margin="0"
+                                            VerticalOptions="StartAndExpand" Grid.Column="0">
+
+                                    <!--Information du Nom du produit dans la liste -->
+                                    <StackLayout Margin="1" Orientation="Horizontal"
+                                            HorizontalOptions="FillAndExpand"
+                                            VerticalOptions="Start">
+                                        <Label Text="Nom produit : " Margin="1" />
+                                        <Label Text="{Binding Name}" VerticalTextAlignment="Center"
+                                                FontAttributes="Bold"
+                                                HorizontalOptions="StartAndExpand"/>
+
+                                    </StackLayout>
+
+                                    <!--Information de la Famille dans la liste -->
+                                    <StackLayout Margin="1" Orientation="Horizontal"
+                                            HorizontalOptions="FillAndExpand"
+                                            VerticalOptions="Start">
+                                        <Label Text="Famille : " Margin="1" />
+                                        <Label Text="{Binding Famille}" VerticalTextAlignment="Center"
+                                                FontAttributes="Bold"
+                                                HorizontalOptions="StartAndExpand"/>
+                                    </StackLayout>
+
+                                    <!--Information de la Quantité dans la liste -->
+                                    <StackLayout Orientation="Horizontal"
+                                            HorizontalOptions="FillAndExpand"
+                                            VerticalOptions="Start" Margin="1,1,1,3">
+                                        <Label Text="Quantité : " Margin="1" />
+                                        <Label Text="{Binding Quantity}" VerticalTextAlignment="Center" FontAttributes="Bold" HorizontalOptions="StartAndExpand"/>
+                                    </StackLayout>
+
+                                </StackLayout>
+                            </Grid>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+            <!--Information qui indique à l'utilisateur le nombre de produit actuel dans la liste-->
+            <Label Text="{Binding lblInfo}" Grid.Row="1" Grid.Column="0" Margin="1"/>
+            <Button x:Name="btnAddProduct" Text="Ajout Médicament" Clicked="btnAddProduct_Clicked" Margin="10" Grid.Row="2" Grid.Column="0" BackgroundColor="#ff6633" TextColor="#fff"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

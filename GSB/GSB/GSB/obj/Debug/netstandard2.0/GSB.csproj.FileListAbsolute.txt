@@ -1,0 +1,16 @@
+C:\Users\David\Desktop\GSB_XamarinForms\GSB\GSB\GSB\bin\Debug\netstandard2.0\GSB.deps.json
+C:\Users\David\Desktop\GSB_XamarinForms\GSB\GSB\GSB\bin\Debug\netstandard2.0\GSB.dll
+C:\Users\David\Desktop\GSB_XamarinForms\GSB\GSB\GSB\bin\Debug\netstandard2.0\ref\GSB.dll
+C:\Users\David\Desktop\GSB_XamarinForms\GSB\GSB\GSB\bin\Debug\netstandard2.0\GSB.pdb
+C:\Users\David\Desktop\GSB_XamarinForms\GSB\GSB\GSB\obj\Debug\netstandard2.0\GSB.csprojAssemblyReference.cache
+C:\Users\David\Desktop\GSB_XamarinForms\GSB\GSB\GSB\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\David\Desktop\GSB_XamarinForms\GSB\GSB\GSB\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\David\Desktop\GSB_XamarinForms\GSB\GSB\GSB\obj\Debug\netstandard2.0\Views\AddProduct.xaml.g.cs
+C:\Users\David\Desktop\GSB_XamarinForms\GSB\GSB\GSB\obj\Debug\netstandard2.0\Views\ProductPage.xaml.g.cs
+C:\Users\David\Desktop\GSB_XamarinForms\GSB\GSB\GSB\obj\Debug\netstandard2.0\GSB.AssemblyInfoInputs.cache
+C:\Users\David\Desktop\GSB_XamarinForms\GSB\GSB\GSB\obj\Debug\netstandard2.0\GSB.AssemblyInfo.cs
+C:\Users\David\Desktop\GSB_XamarinForms\GSB\GSB\GSB\obj\Debug\netstandard2.0\GSB.csproj.CoreCompileInputs.cache
+C:\Users\David\Desktop\GSB_XamarinForms\GSB\GSB\GSB\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\David\Desktop\GSB_XamarinForms\GSB\GSB\GSB\obj\Debug\netstandard2.0\GSB.dll
+C:\Users\David\Desktop\GSB_XamarinForms\GSB\GSB\GSB\obj\Debug\netstandard2.0\ref\GSB.dll
+C:\Users\David\Desktop\GSB_XamarinForms\GSB\GSB\GSB\obj\Debug\netstandard2.0\GSB.pdb

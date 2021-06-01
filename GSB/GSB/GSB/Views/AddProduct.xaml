@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="XamSQLite.Views.AddProduct"
+             Title="Ajouter un Médicament" 
+             Visual="Material"
+             BackgroundColor="White">
+    <!--Balise qui inclue le titre la page, déclaration de classe-->
+
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                     Padding="10">
+            <Entry Text="{Binding product.ID}" Margin="0" FontSize="1" IsVisible="false" 
+            HorizontalOptions="FillAndExpand"/>
+            <!--Balise qui met invisible avec le IsVisible=false -->
+
+            <Label Text="Nom Médicament :" Margin="2"/>
+            <Entry Text="{Binding product.Name}" Margin="2,2,2,5" HorizontalOptions="FillAndExpand"/>
+            <!--Champ pour saisir le Nom du produit-->
+
+            <Label Text="Selectionner une Famille :" Margin="2"/>
+            <Entry Text="{Binding product.Famille}" Margin="2,2,2,5" HorizontalOptions="FillAndExpand"/>
+            <!--Champ pour saisir le Nom de la Famille du Produit , possibilité d'inclure une liste avec balise Spinner mais sasie obligatoire dans le code pour
+            enrichir la liste-->
+
+            <Label Text="Quantité :" Margin="2"/>
+            <Entry Text="{Binding product.Quantity}" Margin="2,2,2,5" 
+                   HorizontalOptions="FillAndExpand" Keyboard="Numeric"/>
+            <!--Champ pour saisir la Quantité de produit-->
+
+
+            <Label Text="{Binding lblInfo}" Margin="2,2,2,5"/>
+            <!--Information lors d'une action effectuée-->
+
+
+            <!--Contient dans une grille les bouton ajout et effacer -->
+            <Grid HorizontalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Text="Enregistrer" x:Name="btnSave" HorizontalOptions="FillAndExpand"
+                        BackgroundColor="DarkSeaGreen" TextColor="#fff"
+                        Margin="2" Grid.Column="0" Grid.Row="0" Command="{Binding btnSaveProduct}"/>
+
+                <Button Text="EFFACER" x:Name="btnClear" HorizontalOptions="FillAndExpand"
+                        BackgroundColor="#D95858"  TextColor="#fff"
+                        Margin="2" Grid.Column="1" Grid.Row="0" Command="{Binding btnClearProduct}"/>
+            </Grid>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
